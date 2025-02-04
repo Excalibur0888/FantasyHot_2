@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<meta name="description" content="Fantasy Basketball - FantasyHot: Your ultimate destination for exciting fantasy sports entertainment. Join now and experience thrilling gameplay!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Basketball - FantasyHot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="basketball-page sport-page">
+    <!-- Age Verification Modal -->
+    <div id="ageVerificationModal" class="modal">
+			<div class="modal-overlay"></div>
+			<div class="modal-container">
+					<h3>Age Verification</h3>
+					<div class="modal-content">
+							<p>Are you 18 years or older?</p>
+					</div>
+					<div class="modal-buttons">
+							<button id="ageYes" class="button primary">Yes</button>
+							<button id="ageNo" class="button secondary">No</button>
+					</div>
+			</div>
+	</div>
+
+	<!-- Restricted Access Modal -->
+	<div id="restrictedModal" class="modal">
+			<div class="modal-overlay"></div>
+			<div class="modal-container">
+					<h3>Access Restricted</h3>
+					<div class="modal-content">
+							<p>Sorry, you must be 18 or older to access this site.</p>
+							<p>You will be redirected in a few seconds...</p>
+					</div>
+			</div>
+	</div>
+
+	<header class="header">
+		<nav class="nav">
+				<div class="nav-container">
+						<a href="index.html" class="logo">
+								<img src="img/logo.svg" alt="FantasyHot Logo">
+						</a>
+						<button class="menu-toggle" aria-label="Открыть меню">
+								<svg viewBox="0 0 24 24">
+										<path d="M3 12h18M3 6h18M3 18h18"/>
+								</svg>
+						</button>
+						<div class="nav-menu">
+								<ul class="nav-list">
+										<li><a href="index.html" class="active">Home</a></li>
+										<li class="dropdown">
+												<a href="contact.html" class="dropdown-toggle">Fantasy Sports</a>
+												<ul class="dropdown-menu">
+														<li><a href="cricket.html">Fantasy Cricket</a></li>
+														<li><a href="football.html">Fantasy Football</a></li>
+														<li><a href="basketball.html">Fantasy Basketball</a></li>
+														<li><a href="kabaddi.html">Fantasy Kabaddi</a></li>
+												</ul>
+										</li>
+										<li class="dropdown">
+												<a href="contact.html" class="dropdown-toggle">Arcade Games</a>
+												<ul class="dropdown-menu">
+														<li><a href="aviator.html">Aviator</a></li>
+														<li><a href="plinko.html">Plinko</a></li>
+														<li><a href="laser247.html">Laser247</a></li>
+														<li><a href="101f.html">101F</a></li>
+												</ul>
+										</li>
+										<li><a href="blog.html">Blog</a></li>
+										<li><a href="contact.html">Contact</a></li>
+								</ul>
+						</div>
+				</div>
+		</nav>
+</header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="sport-hero">
+            <div class="container">
+                <div class="sport-hero-content">
+                    <h1>Fantasy Basketball</h1>
+                    <p class="lead">Create Your Dream Team</p>
+                    <p class="hero-text">Draft the best NBA players and win tournaments!</p>
+                    <div class="hero-buttons">
+                        <a href="#tournaments" class="button primary">View Tournaments</a>
+                        <a href="#how-to-play" class="button secondary">How to Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="sport-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                        </div>
+                        <h3>75,000+</h3>
+                        <p>Active Players</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3>180+</h3>
+                        <p>Tournaments</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>
+                            </svg>
+                        </div>
+                        <h3>30</h3>
+                        <p>NBA Teams</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                            </svg>
+                        </div>
+                        <h3>4.7/5</h3>
+                        <p>Player Rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tournaments Section -->
+        <section class="matches-section" id="tournaments">
+            <div class="container">
+                <h2 class="section-title">Current Tournaments</h2>
+                <div class="match-grid">
+                    <div class="match-card">
+                        <div class="match-header">
+                            <span class="match-badge">NBA</span>
+                            <span class="match-status active">Live</span>
+                        </div>
+                        <div class="match-content">
+                            <h3>NBA All-Star Weekend</h3>
+                            <p>Join the most prestigious tournament of the season!</p>
+                            <div class="match-stats">
+                                <div class="stat-item">
+                                    <span>Prize Pool</span>
+                                    <strong>50,000 Points</strong>
+                                </div>
+                                <div class="stat-item">
+                                    <span>Players</span>
+                                    <strong>25,000+</strong>
+                                </div>
+                            </div>
+                            <a href="contact.html">                            <a href="contact.html"> <button class="button primary">Join Now</button></a>
+</a>
+                        </div>
+                    </div>
+                    <div class="match-card">
+                        <div class="match-header">
+                            <span class="match-badge">NBA</span>
+                            <span class="match-status active">Live</span>
+                        </div>
+                        <div class="match-content">
+                            <h3>NBA Regular Season</h3>
+                            <p>Compete in the regular season tournament!</p>
+                            <div class="match-stats">
+                                <div class="stat-item">
+                                    <span>Prize Pool</span>
+                                    <strong>40,000 Points</strong>
+                                </div>
+                                <div class="stat-item">
+                                    <span>Players</span>
+                                    <strong>20,000+</strong>
+                                </div>
+                            </div>
+                            <a href="contact.html">                            <a href="contact.html"> <button class="button primary">Join Now</button></a>
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="how-to-play">
+            <div class="container">
+                <h2 class="section-title">How to Play</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                            </svg>
+                            <span>1</span>
+                        </div>
+                        <h4>Create Account</h4>
+                        <p>Sign up and get started</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                            </svg>
+                            <span>2</span>
+                        </div>
+                        <h4>Join Tournament</h4>
+                        <p>Choose your favorite tournament</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/>
+                            </svg>
+                            <span>3</span>
+                        </div>
+                        <h4>Build Team</h4>
+                        <p>Select your dream team lineup</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/>
+                            </svg>
+                            <span>4</span>
+                        </div>
+                        <h4>Track Progress</h4>
+                        <p>Monitor your team's performance</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                            <span>5</span>
+                        </div>
+                        <h4>Win Prizes</h4>
+                        <p>Compete and earn rewards</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Players Section -->
+        <section class="featured-players-basketball">
+            <div class="container">
+                <h2 class="section-title">Featured Players</h2>
+                <div class="players-grid">
+                    <div class="player-card golden">
+                        <div class="player-header">
+                            <img src="img/lebron.jpg" alt="LeBron James">
+                            <div class="player-badge premium">Premium</div>
+                        </div>
+                        <div class="player-content">
+                            <h3>LeBron James</h3>
+                            <p class="player-role">Small Forward</p>
+                            <div class="player-stats">
+                                <div class="stat">
+                                    <span>Scoring</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 96%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span>Playmaking</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 94%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span>Leadership</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html"><button class="button primary">Select Player</button></a>
+                        </div>
+                    </div>
+
+                    <div class="player-card golden">
+                        <div class="player-header">
+                            <img src="img/curry.jpg" alt="Stephen Curry">
+                            <div class="player-badge premium">Premium</div>
+                        </div>
+                        <div class="player-content">
+                            <h3>Stephen Curry</h3>
+                            <p class="player-role">Point Guard</p>
+                            <div class="player-stats">
+                                <div class="stat">
+                                    <span>3-Point</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 99%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span>Handling</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span>Speed</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 93%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html"><button class="button primary">Select Player</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Boosts Section -->
+        <section class="boosts-section-basketball">
+            <div class="container">
+                <h2 class="section-title">Power Boosts</h2>
+                <div class="boosts-grid">
+                    <div class="boost-card">
+                        <div class="boost-header">
+                            <div class="boost-badge">Premium</div>
+                            <h3>Sharpshooter Elite</h3>
+                        </div>
+                        <div class="boost-content">
+                            <div class="boost-stats">
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 18l-6-3.75V8.5l6 3.75 6-3.75v7.75L12 20z"/>
+                                    </svg>
+                                    <span>+30% 3-Point Accuracy</span>
+                                </div>
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    </svg>
+                                    <span>Double Points on 3-Pointers</span>
+                                </div>
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    </svg>
+                                    <span>Valid for 3 Games</span>
+                                </div>
+                            </div>
+                            <a href="contact.html"><button class="button primary">Activate Boost</button></a>
+                        </div>
+                    </div>
+
+                    <div class="boost-card">
+                        <div class="boost-header">
+                            <div class="boost-badge">Premium</div>
+                            <h3>Playmaker Pro</h3>
+                        </div>
+                        <div class="boost-content">
+                            <div class="boost-stats">
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 18l-6-3.75V8.5l6 3.75 6-3.75v7.75L12 20z"/>
+                                    </svg>
+                                    <span>+25% Assist Points</span>
+                                </div>
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    </svg>
+                                    <span>Bonus for Fast Breaks</span>
+                                </div>
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    </svg>
+                                    <span>Valid for 5 Games</span>
+                                </div>
+                            </div>
+                            <a href="contact.html"><button class="button primary">Activate Boost</button></a>
+                        </div>
+                    </div>
+
+                    <div class="boost-card">
+                        <div class="boost-header">
+                            <div class="boost-badge">Premium</div>
+                            <h3>Defensive Master</h3>
+                        </div>
+                        <div class="boost-content">
+                            <div class="boost-stats">
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 18l-6-3.75V8.5l6 3.75 6-3.75v7.75L12 20z"/>
+                                    </svg>
+                                    <span>2x Points for Blocks</span>
+                                </div>
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    </svg>
+                                    <span>+30% Rebound Points</span>
+                                </div>
+                                <div class="boost-stat">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    </svg>
+                                    <span>Valid for 4 Games</span>
+                                </div>
+                            </div>
+                            <a href="contact.html"><button class="button primary">Activate Boost</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+			<div class="container">
+			<div class="footer-content">
+					<div class="footer-brand">
+							<img src="img/logo.svg" alt="FantasyHot Logo">
+							<p>Your ultimate destination for fantasy sports and arcade gaming. Join our community and start playing today!</p>
+							<div class="responsible-gaming">
+								<div class="age-restriction">18+</div>
+								<a href="https://www.gamcare.org.uk/" target="_blank" rel="noopener noreferrer">
+										<img src="img/6.png" alt="GamCare Logo" class="gamcare-logo">
+								</a>
+						</div>
+							<div class="social-links">
+									<a href="contact.html" aria-label="Facebook">
+											<svg viewBox="0 0 24 24">
+													<path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
+											</svg>
+									</a>
+									<a href="contact.html" aria-label="Twitter">
+											<svg viewBox="0 0 24 24">
+													<path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"/>
+											</svg>
+									</a>
+									<a href="contact.html" aria-label="Instagram">
+											<svg viewBox="0 0 24 24">
+													<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 0000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+											</svg>
+									</a>
+							</div>
+					</div>
+					<div class="footer-links">
+							<div class="footer-section">
+									<h3>Quick Links</h3>
+									<ul>
+											<li><a href="about.html">About Us</a></li>
+											<li><a href="games.html">Games</a></li>
+											<li><a href="tournaments.html">Tournaments</a></li>
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="contact.html">Contact</a></li>
+									</ul>
+							</div>
+							<div class="footer-section">
+									<h3>Legal</h3>
+									<ul>
+											<li><a href="terms-conditions.html">Terms of Use</a></li>
+											<li><a href="privacy-policy.html">Privacy Policy</a></li>
+									</ul>
+							</div>
+							<div class="footer-section">
+									<h3>Contact Us</h3>
+									<ul class="contact-info">
+											<li><a href="mailto:contact@fantasyhot.com">contact@fantasyhot.com</a></li>
+											<li><a href="tel:+918479351601">+91 84793-51601</a></li>
+											
+									</ul>
+							</div>
+					</div>
+			</div>
+			<div class="footer-bottom">
+					<p>&copy; 2024 FantasyHot. All rights reserved.</p>
+			</div>
+			</div>
+	</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
