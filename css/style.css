@@ -2144,6 +2144,13 @@ section {
     vertical-align: middle;
 }
 
+.dropdown-toggle {
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+	font-weight: 500;
+	cursor: pointer;
+}
+
 .dropdown-toggle svg {
     width: 12px;
     height: 12px;
