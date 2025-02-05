@@ -70,19 +70,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            this.classList.toggle('active');
         });
     }
 
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.nav-menu') && !e.target.closest('.menu-toggle')) {
-            const navMenu = document.querySelector('.nav-menu');
-            if (navMenu && navMenu.classList.contains('active')) {
+            if (navMenu) {
                 navMenu.classList.remove('active');
+            }
+            if (menuToggle) {
+                menuToggle.classList.remove('active');
             }
         }
     });
@@ -224,6 +228,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.disabled = false;
                 this.textContent = originalText;
             }, 2000);
+        });
+    });
+
+    // Обработка выпадающих списков
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Закрываем все остальные открытые меню
+            dropdownToggles.forEach(otherToggle => {
+                if (otherToggle !== toggle) {
+                    otherToggle.classList.remove('active');
+                    otherToggle.nextElementSibling.classList.remove('show');
+                }
+            });
+
+            // Открываем/закрываем текущее меню
+            this.classList.toggle('active');
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
         });
     });
 });
